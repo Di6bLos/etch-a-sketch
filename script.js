@@ -7,9 +7,8 @@ gridContainer.style.border = '1px solid red';
 
 // Setting grid height to always equal its with.
 const gridStyle = window.getComputedStyle(gridContainer);
-const currentGridWidth = gridStyle.getPropertyValue('width')
-console.log(currentGridWidth);
-
+const currentGridWidth = gridStyle.getPropertyValue('width');
+//console.log(currentGridWidth);
 const gridHeight = gridContainer.style.height = currentGridWidth;
 
 // Sets the amount of rows and columns for the grid,
@@ -23,16 +22,21 @@ function generateGrid(gridSize) {
          const div = document.createElement('div');
 
             div.classList.add('pixel');
-            gridContainer.appendChild(div);  
-        
-    }
-
+            gridContainer.appendChild(div);     
+    };
    console.log(gridSize); 
    return gridSize;
 };
 
+generateGrid(32);
 
+// Getting the pixels to change color when mouse enters
 
+const pixels = document.querySelectorAll('.pixel');
 
-generateGrid(16);
+pixels.forEach((pixel)=>{
+    pixel.addEventListener('click', (e)=> {
+        e.target.style.background = 'black';
+    })
+});
 
