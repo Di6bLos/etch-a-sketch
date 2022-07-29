@@ -35,8 +35,9 @@ generateGrid(32);
 const pixels = document.querySelectorAll('.pixel');
 
 pixels.forEach((pixel)=>{
-    pixel.addEventListener('click', (e)=> {
+    pixel.addEventListener('mouseenter', (e)=> {
         e.target.style.background = 'black';
+    
     })
 });
 
