@@ -5,28 +5,21 @@ const gridContainer = document.querySelector('.grid-container');
 const numOfPixels = gridContainer.childElementCount;
 gridContainer.style.border = '1px solid red';
 
+// Setting grid height to always equal its with.
+const gridStyle = window.getComputedStyle(gridContainer);
+const currentGridWidth = gridStyle.getPropertyValue('width')
+console.log(currentGridWidth);
 
+const gridHeight = gridContainer.style.height = currentGridWidth;
 
+// Sets the amount of rows and columns for the grid,
+// and generates a div in each tile.
 
+function generateGrid(gridSize) {
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
 
-
-    function changeGridSize() {
-        
-       
-    }
-
-
-
-
-
-function createPixel(gridSize) {
-    gridContainer.setAttribute('style',
-    `grid-template-columns: repeat(${gridSize}, 10px); 
-    grid-template-rows: repeat(${gridSize}, 10px);`);
-
-
-    gridSize = gridSize*gridSize;
-    for (let i = 0; i < gridSize; i++) {
+    for (let i = 0; i < gridSize*gridSize; i++) {
          const div = document.createElement('div');
 
             div.classList.add('pixel');
@@ -41,5 +34,5 @@ function createPixel(gridSize) {
 
 
 
-createPixel(32);
+generateGrid(16);
 

@@ -27,12 +27,14 @@ h1 {
     text-align: center;
     margin: 1rem;
 }
+main {
+    padding: .5rem;
+}
 
 .grid-container {
-    margin: 0 auto;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(16, 20px);
-    grid-template-rows: repeat(16, 20px);
+    max-width: 500px;
 }
 
 .pixel {
