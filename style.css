@@ -1,0 +1,41 @@
+/* ==== STYLE RESET ==== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	text-decoration: none;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    overflow-y: auto;
+}
+img,
+picture {
+    width: 100%;
+}
+
+/* ===================== */
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(16, 20px);
+}
+
+.pixel {
+    border: 1px solid red;
+    background-color: #363636;
+}
