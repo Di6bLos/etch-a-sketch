@@ -15,20 +15,25 @@ const gridHeight = gridContainer.style.height = currentGridWidth;
 // and generates a div in each tile.
 
 function generateGrid(gridSize) {
-    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
-    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+    if (gridSize <= 100) {
+        gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+        gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
 
-    for (let i = 0; i < gridSize*gridSize; i++) {
-         const div = document.createElement('div');
+        for (let i = 0; i < gridSize*gridSize; i++) {
+            const div = document.createElement('div');
 
-            div.classList.add('pixel');
-            gridContainer.appendChild(div);     
+                div.classList.add('pixel');
+                gridContainer.appendChild(div);     
+        };
+    } else {
+        generateGrid(prompt("Sorry, can't handle that much. Keep it under 100."));
     };
-   console.log(gridSize);  
-   return gridSize;
+//    console.log(gridSize);  
+//    return gridSize;
 };
 
-generateGrid(prompt('What size will your canvas be?'));
+// Initiating page
+generateGrid(prompt("What size will your canvas be?(16-100) "));
 
 // Getting the pixels to change color when mouse enters
 
