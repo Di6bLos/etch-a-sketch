@@ -1,52 +1,52 @@
 /* ==== STYLE RESET ==== */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-	text-decoration: none;
-    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 html {
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
 }
 body {
-    height: 100%;
-    overflow-y: auto;
-    background-color: beige;
+  height: 100%;
+  overflow-y: auto;
+  background-color: beige;
 }
 img,
 picture {
-    width: 100%;
+  width: 100%;
 }
 
 /* ===================== */
 
 h1 {
-    text-align: center;
-    margin: 1rem;
+  text-align: center;
+  margin: 1rem;
 }
 main {
-    padding: .5rem;
-    display: flex;
-    flex-direction: column;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-container {
-    display: grid;
-   max-width: 500px;
-   margin: auto;
+  display: grid;
+  max-width: 500px;
+  margin: auto;
+  border: 2px solid black;
 }
 
 .pixel {
-    /* border: 1px solid red; */
-    background-color: #fff;
+  /* border: 1px solid red; */
+  background-color: #fff;
 }
 
 .btn {
-    padding: .5em 1em;
-    margin: 1em auto;
-
+  padding: 0.5em 1em;
+  margin: .5em auto 2em;
 }

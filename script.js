@@ -3,7 +3,6 @@
 // grid container
 const gridContainer = document.querySelector('.grid-container');
 const numOfPixels = gridContainer.childElementCount;
-gridContainer.style.border = '1px solid red';
 
 // Setting grid height to always equal its with.
 const gridStyle = window.getComputedStyle(gridContainer);
@@ -26,14 +25,14 @@ function generateGrid(gridSize) {
                 gridContainer.appendChild(div);     
         };
     } else {
-        generateGrid(prompt("Sorry, can't handle that much. Keep it under 100."));
+        generateGrid(prompt("Sorry, can't handle that much. Keep it under 100px."));
     };
 //    console.log(gridSize);  
 //    return gridSize;
 };
 
 // Initiating page
-generateGrid(prompt("What size will your canvas be?(16-100) "));
+generateGrid(prompt("What size will your canvas be?(16px-100px) "));
 
 // Getting the pixels to change color when mouse enters
 
