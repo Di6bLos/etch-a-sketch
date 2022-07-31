@@ -24,20 +24,33 @@ function generateGrid(gridSize) {
             div.classList.add('pixel');
             gridContainer.appendChild(div);     
     };
-   console.log(gridSize); 
+   console.log(gridSize);  
    return gridSize;
 };
 
-generateGrid(32);
+generateGrid(prompt('What size will your canvas be?'));
 
 // Getting the pixels to change color when mouse enters
 
 const pixels = document.querySelectorAll('.pixel');
 
 pixels.forEach((pixel)=>{
-    pixel.addEventListener('mouseover'||'touchstart', (e)=> {
+    pixel.addEventListener('mouseover', (e)=> {
         e.target.style.background = 'black';
     
     })
+});
+
+// Reset grid button
+const resetBtn = document.createElement('button');
+const wrap = document.querySelector('.wrap');
+document.querySelector('main').insertBefore(resetBtn, wrap);
+
+resetBtn.textContent = 'RESET GRID';
+resetBtn.classList.add('btn');
+resetBtn.id = 'resetBtn';
+resetBtn.setAttribute('type', 'reset');
+resetBtn.addEventListener('click', () => {
+    window.location.reload(true);
 });
 

@@ -30,15 +30,23 @@ h1 {
 }
 main {
     padding: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-container {
-    margin: auto;
     display: grid;
-    max-width: 500px;
+   max-width: 500px;
+   margin: auto;
 }
 
 .pixel {
     /* border: 1px solid red; */
     background-color: #fff;
+}
+
+.btn {
+    padding: .5em 1em;
+    margin: 1em auto;
+
 }
